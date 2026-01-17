@@ -6,12 +6,9 @@ import { TECH_STACK } from "../../data/tech.data";
 
 export default function Skills() {
   return (
-    <section id="skills" className="mmx-auto px-10 my-24">
-      <h2 className="text-4xl font-bold mb-6">Skills</h2>
+    <section id="skills" className="mmx-auto p-5">
 
-      
-
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
+      <div className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-7 gap-6">
         {TECH_STACK.map((tech) => (
           <TechItem key={tech.key} tech={tech} />
         ))}

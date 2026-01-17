@@ -12,38 +12,49 @@ import Navbar from "@/components/sections/Navbar";
 
 export default function Home() {
   return (
-      <div className="top-0 max-w-2xl mx-auto dark:text-gray-300 text-gray-800 relative z-10 min-h-screen px-4">
+    <div className="top-0 max-w-2xl mx-auto dark:text-gray-300 text-gray-800 relative z-10 min-h-screen px-4">
 
-      <VerticalPageBorders/>
+      <VerticalPageBorders />
 
 
-        {/* <DashedDivider /> */}
-        <DottedBackground />
-        <DashedDivider />
-        <Navbar/>
-        <DashedDivider/>
+      {/* <DashedDivider /> */}
+      <DottedBackground />
+      <DashedDivider />
+      <Navbar />
+      <DashedDivider />
 
-        <Hero />
-        <DashedDivider />
+      <Hero />
+      <DashedDivider />
+      <h1 className='text-4xl font-bold m-2'>Experience</h1>
 
-        <Projects />
-        <DashedDivider />
+      <DashedDivider />
 
-        <Experience />
-        <DashedDivider />
+      <Experience />
+      <DashedDivider />
+      <h1 className='text-4xl font-bold m-2'>Projects</h1>
 
-        <Education />
-        <DashedDivider />
+      <DashedDivider />
 
-        <Skills />
-        <DashedDivider />
+      <Projects />
 
-        <About />
-        <DashedDivider />
+      <DashedDivider />
+      <h1 className='text-4xl font-bold m-2'>Education</h1>
 
-        <Footer />
-        <DashedDivider />
-        <DottedBackground />
+      <DashedDivider />
+      <Education />
+      <DashedDivider />
+      <h1 className='text-4xl font-bold m-2'>Skills</h1>
+
+      <DashedDivider />
+
+      <Skills />
+      <DashedDivider />
+
+
+
+      <Footer />
+      <DashedDivider />
+      <DottedBackground />
     </div>
   );
 }

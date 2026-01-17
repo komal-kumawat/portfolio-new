@@ -9,12 +9,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="mx-auto px-10 my-24">
-      {/* Heading */}
-      <h2 className="text-4xl font-bold mb-4">Experience</h2>
-      <p className="text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
-        Hands-on experience building real-world applications, collaborating in
-        teams, and shipping production-ready features.
-      </p>
+
 
       <div className="space-y-6">
         {EXPERIENCES.map((exp, index) => {

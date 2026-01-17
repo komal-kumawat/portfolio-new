@@ -7,9 +7,8 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 const Projects = () => {
     const [showAll, setShowAll] = useState<Boolean>(false);
     return (
-        <div id='projects' className='mx-auto px-10 my-24'
+        <div id='projects' className='mx-auto '
         >
-            <h1 className='text-4xl font-bold mb-10'>Projects</h1>
             <div className='grid grid-cols-1 lg:grid-cols-2 m-2 gap-5 w-full'>
                 {
                     (showAll ? PROJECTS : PROJECTS.slice(0, 4)).map((project, idx) => (
