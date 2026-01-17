@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { AnimatedThemeToggler } from "../ui/themeToggle";
 import { Github, Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const Navbar = () => {
     const { theme } = useTheme();
@@ -31,95 +32,64 @@ const Navbar = () => {
     return (
         <nav
             className="
-        fixed top-0 left-1/2 -translate-x-1/2
-        w-full max-w-[800px]
-        z-50
-        backdrop-blur-sm
-        px-6 py-3
+        flex flex-col gap-10   mx-auto px-2 py-2
       "
         >
-            <div className="flex justify-between items-center">
-                <Link href="/" className="flex items-center cursor-pointer">
-                    <motion.img
-                        key={mounted ? theme : "default"}
-                        src={
-                            !mounted
-                                ? "/logo-light.svg"
-                                : theme === "dark"
-                                    ? "/logo-dark.svg"
-                                    : "/logo-light.svg"
-                        }
-                        alt="komal logo"
-                        className="w-25 h-auto "
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.3 }}
+            <div className="flex  justify-between">
+
+                <div className="flex  gap-5">
+                    <Image
+                        src="/profile_pic.png"
+                        width={100}
+                        height={100}
+                        alt="profile"
+                        className="rounded-md cursor-pointer"
+
                     />
-                </Link>
-                <div className="flex items-center gap-2 font-mono">
+                    <div className="flex flex-col justify-between">
+                        <div></div>
+                        <div>
+                            <h1 className="font-bold text-2xl cursor-default ">
+                                Komal Kumawat
+                            </h1>
+                            <h3 className="dark:text-gray-400 text-gray-700 text-sm cursor-default">Full Stack Web Developer</h3>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div className="flex items-start gap-2 font-mono">
                     <Link
                         href="https://github.com/komal-kumawat"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="
               p-2 rounded-md
-            text-gray-700 dark:text-gray-300
+            text-gray-700 dark:text-gray-400
             hover:bg-gray-200 dark:hover:bg-gray-800
             transition
             "
                     >
-                        <Github size={20} />
+                        <Github size={22} />
                     </Link>
 
                     <AnimatedThemeToggler
                         className="
             p-2 rounded-md
-            text-gray-700 dark:text-gray-300
+            text-gray-700 dark:text-gray-400
             hover:bg-gray-200 dark:hover:bg-gray-800
             transition
           "
                     />
-
-                    <button
-                        onClick={toggleMenu}
-                        aria-label={isOpen ? "Close menu" : "Open menu"}
-                        className="p-2 rounded-md
-            text-gray-700 dark:text-gray-300
-            hover:bg-gray-200 dark:hover:bg-gray-800
-            transition"
-                    >
-                        {isOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
-
                 </div>
+
+
 
 
             </div>
-            {isOpen && (
-                <div className="bg-white/95 dark:bg-black/95 backdrop-blur-md shadow-lg border-t border-gray-200 dark:border-gray-700 transition-colors duration-300">
-                    <div className="flex flex-col items-center space-y-5 py-10">
-                        {navItems.map((item) =>
-
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                className="transition-colors text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                {item.name}
-                            </Link>
-                        )
-                        }
-                        <Link
-                            href="#footer"
-                            className="rounded-full border px-6 py-1.5 transition-colors bg-gray-900 text-white border-gray-900 hover:bg-white hover:text-black dark:bg-gray-100 dark:text-black dark:border-gray-100 dark:hover:bg-black dark:hover:text-white"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            Connect
-                        </Link>
-                    </div>
-                </div>
-            )}
         </nav>
     );
 };

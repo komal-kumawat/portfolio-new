@@ -8,6 +8,7 @@ import Skills from "@/components/sections/Skills";
 import DottedBackground from "@/components/ui/DottedBackground";
 import DashedDivider from "@/components/ui/DashedDivider";
 import VerticalPageBorders from "@/components/ui/VerticalDashedDivider";
+import Navbar from "@/components/sections/Navbar";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
         {/* <DashedDivider /> */}
         <DottedBackground />
         <DashedDivider />
+        <Navbar/>
+        <DashedDivider/>
 
         <Hero />
         <DashedDivider />

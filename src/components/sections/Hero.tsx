@@ -7,89 +7,27 @@ import IconComp from "../ui/IconComp";
 import { Twitter } from "lucide-react";
 import { AnimatedThemeToggler } from "../ui/themeToggle";
 import Link from "next/link";
+import DashedDivider from "../ui/DashedDivider";
 
 const Hero = () => {
-    const [displayProfile, setDisplayProfile] = useState(false);
 
     return (
-        <div className="flex flex-col gap-10   mx-auto px-2 py-2">
-
-            <div className="flex  justify-between">
-
-                <div className="flex  gap-5">
-                    <Image
-                        src="/profile_pic.png"
-                        width={100}
-                        height={100}
-                        alt="profile"
-                        className="rounded-md cursor-pointer"
-                        onMouseEnter={() => setDisplayProfile(true)}
-                        onMouseLeave={() => setDisplayProfile(false)}
-                    />
-                    <div className="flex flex-col justify-between">
-                        <div></div>
-                        <div>
-                            <h1 className="font-bold text-2xl cursor-default ">
-                                Komal Kumawat
-                            </h1>
-                            <h3 className="dark:text-gray-400 text-gray-700 text-sm cursor-default">Full Stack Web Developer</h3>
-                        </div>
-
-                    </div>
-
-                </div>
+        <div className="flex flex-col gap-2   mx-auto px-2 py-2">
 
 
+            <div className="m-2 flex flex-col gap-2" >
 
-                <div className="flex items-start gap-2 font-mono">
-                    <Link
-                        href="https://github.com/komal-kumawat"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="
-              p-2 rounded-md
-            text-gray-700 dark:text-gray-400
-            hover:bg-gray-200 dark:hover:bg-gray-800
-            transition
-            "
-                    >
-                        <Github size={22} />
-                    </Link>
+                <span className="dark:text-gray-400 text-gray-600  flex flex-wrap items-center  text-sm" style={{ wordSpacing: '0.5rem' }}>
+                    Hey, I'm Komal Kumawat, a full stack developer who loves building clean, modern websites and apps where design, functionality, and even the smallest details matter, with a focus on making products that are both practical and visually satisfying.
 
-                    <AnimatedThemeToggler
-                        className="
-            p-2 rounded-md
-            text-gray-700 dark:text-gray-400
-            hover:bg-gray-200 dark:hover:bg-gray-800
-            transition
-          "
-                    />
-                </div>
+                </span>
+                                <span className="dark:text-gray-400 text-gray-600  flex flex-wrap items-center  text-sm" style={{ wordSpacing: '0.5rem' }}>
 
+                    Tech stack isn't my concern, I'm flexible with whatever the project needs, though I prefer modern frameworks and tools. I'm always open for new opportunities to learn and grow.
 
-
-
+                </span>
             </div>
-            <div className="m-2 flex flex-col gap-5" >
-                <h1 className="text-4xl font-bold  ">
-                    Hi, I'm Komal —  <span className="text-gray-500">A Full Stack web developer.</span>
-                </h1>
-                <span className="dark:text-gray-400 text-gray-600  flex flex-wrap items-center gap-2 font-medium" style={{ wordSpacing: '0.5rem' }}>I build interactive web apps using
-                    <Button name="Typescript" iconPath="/icons/typescript.svg" url="https://www.typescriptlang.org/">
-                    </Button>
-                    ,
-                    <Button name="React" iconPath="/icons/react.svg" url="https://react.dev/">
-                    </Button>
-                    ,
-                    <Button name="NextJs" iconPath="/icons/nextjs-light.svg" url="https://nextjs.org/">
-                    </Button>
-
-                    and
-                    <Button name="MongoDB" iconPath="/icons/mongo.svg" url="https://www.mongodb.com/"></Button>. Passionate about UI/UX design and creating seamless user experiences.
-                    From idea to deployment, I love building products that feel fast, intuitive, and reliable.</span>
-
-            </div>
-            <div className="flex flex-wrap gap-4 mx-4 ">
+            <div className="flex flex-wrap gap-4 mx-2 ">
                 {/* Resume Button */}
                 <a
                     href="/resume.pdf"
@@ -97,7 +35,7 @@ const Hero = () => {
                     rel="noopener noreferrer"
                     className="
       group inline-flex items-center gap-2
-      px-5 py-2.5
+       p-2.5
       rounded-xl
       border border-neutral-300 dark:border-neutral-700
       bg-white dark:bg-neutral-900
@@ -113,15 +51,15 @@ const Hero = () => {
                         size={18}
                         className="transition-transform duration-300 group-hover:scale-110 dark:text-gray-400 text-gray-600"
                     />
-                    <span className="font-medium dark:text-gray-400 text-gray-600">Resume</span>
+                    <span className="text-sm dark:text-gray-400 text-gray-600">Resume</span>
                 </a>
 
                 {/* GitHub Button */}
                 <a
-                    href="#footer"
+                    href="mailto:kumawatkomal17122004@gmail.com"
                     className="
       group inline-flex items-center gap-2
-      px-5 py-2.5
+       p-2.5
       rounded-xl
       border border-neutral-300 dark:border-neutral-700
       bg-white dark:bg-neutral-900
@@ -133,15 +71,15 @@ const Hero = () => {
       focus:outline-none focus:ring-2 focus:ring-neutral-400 dark:focus:ring-neutral-600
     "
                 >
-                    <Send
+                    <Mail
                         size={18}
                         className="transition-transform duration-300 group-hover:scale-110 dark:text-gray-400 text-gray-600"
                     />
-                    <span className="font-medium dark:text-gray-400 text-gray-600">Connect Now</span>
+                    <span className="text-sm dark:text-gray-400 text-gray-600">Send an email</span>
                 </a>
             </div>
 
-            <div className="flex mx-5 gap-2 items-center">
+            <div className="flex mx-2 gap-2 items-center">
                 <IconComp name="Github" url="https://github.com/komal-kumawat" icon={<Github size={22} className="text-gray-400" />
                 } />
                 <IconComp name="LinkedIn" url="https://www.linkedin.com/in/komal-kumawat-7032662a0/" icon={<Linkedin size={22} className="text-gray-400" />
