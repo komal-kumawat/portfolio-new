@@ -8,7 +8,7 @@ export default function Education() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="education" className="max-w-4xl mx-auto px-4 my-24">
+    <section id="education" className="mx-auto px-10 my-24">
       {/* Heading */}
       <h2 className="text-4xl font-bold mb-6">Education</h2>
 

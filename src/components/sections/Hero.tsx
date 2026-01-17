@@ -5,35 +5,69 @@ import Button from "../ui/Button";
 import { FileText, Github, Linkedin, Mail, Send } from "lucide-react";
 import IconComp from "../ui/IconComp";
 import { Twitter } from "lucide-react";
+import { AnimatedThemeToggler } from "../ui/themeToggle";
+import Link from "next/link";
 
 const Hero = () => {
     const [displayProfile, setDisplayProfile] = useState(false);
 
     return (
-        <div className="flex flex-col gap-10  py-10">
+        <div className="flex flex-col gap-10   mx-auto px-2 py-2">
 
-            <div className="flex items-center gap-3">
-                <Image
-                    src="/profile_pic.png"
-                    width={120}
-                    height={100}
-                    alt="profile"
-                    className="rounded-full cursor-pointer"
-                    onMouseEnter={() => setDisplayProfile(true)}
-                    onMouseLeave={() => setDisplayProfile(false)}
-                />
+            <div className="flex  justify-between">
 
-                <div
-                    className={`
-          overflow-hidden
-          transition-all duration-500 ease-in-out
-          ${displayProfile ? "opacity-100 max-w-[200px] translate-x-0" : "opacity-0 max-w-0 -translate-x-2"}
-        `}
-                >
-                    <span className="whitespace-nowrap font-semibold">
-                        KOMAL KUMAWAT
-                    </span>
+                <div className="flex  gap-5">
+                    <Image
+                        src="/profile_pic.png"
+                        width={100}
+                        height={100}
+                        alt="profile"
+                        className="rounded-md cursor-pointer"
+                        onMouseEnter={() => setDisplayProfile(true)}
+                        onMouseLeave={() => setDisplayProfile(false)}
+                    />
+                    <div className="flex flex-col justify-between">
+                        <div></div>
+                        <div>
+                            <h1 className="font-bold text-2xl cursor-default ">
+                                Komal Kumawat
+                            </h1>
+                            <h3 className="dark:text-gray-400 text-gray-700 text-sm cursor-default">Full Stack Web Developer</h3>
+                        </div>
+
+                    </div>
+
                 </div>
+
+
+
+                <div className="flex items-start gap-2 font-mono">
+                    <Link
+                        href="https://github.com/komal-kumawat"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="
+              p-2 rounded-md
+            text-gray-700 dark:text-gray-400
+            hover:bg-gray-200 dark:hover:bg-gray-800
+            transition
+            "
+                    >
+                        <Github size={22} />
+                    </Link>
+
+                    <AnimatedThemeToggler
+                        className="
+            p-2 rounded-md
+            text-gray-700 dark:text-gray-400
+            hover:bg-gray-200 dark:hover:bg-gray-800
+            transition
+          "
+                    />
+                </div>
+
+
+
 
             </div>
             <div className="m-2 flex flex-col gap-5" >

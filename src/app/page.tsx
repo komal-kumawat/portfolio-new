@@ -1,32 +1,46 @@
 import About from "@/components/sections/About";
-import CTA from "@/components/sections/CTA";
 import Education from "@/components/sections/Education";
 import Experience from "@/components/sections/Experience";
 import Footer from "@/components/sections/Footer";
 import Hero from "@/components/sections/Hero";
-import Navbar from "@/components/sections/Navbar";
 import Projects from "@/components/sections/Projects";
 import Skills from "@/components/sections/Skills";
-import Image from "next/image";
+import DottedBackground from "@/components/ui/DottedBackground";
+import DashedDivider from "@/components/ui/DashedDivider";
+import VerticalPageBorders from "@/components/ui/VerticalDashedDivider";
 
 export default function Home() {
   return (
-    <div className="max-w-[800px]  flex flex-col  items-center m-auto text-gray-300">
-      <Navbar />
-      <main className="m-8 mt-30 dark:text-gray-300 text-gray-800">
+      <div className="top-0 max-w-2xl mx-auto dark:text-gray-300 text-gray-800 relative z-10 min-h-screen px-4">
+
+      <VerticalPageBorders/>
+
+
+        {/* <DashedDivider /> */}
+        <DottedBackground />
+        <DashedDivider />
+
         <Hero />
+        <DashedDivider />
+
         <Projects />
+        <DashedDivider />
+
         <Experience />
+        <DashedDivider />
+
         <Education />
+        <DashedDivider />
+
         <Skills />
+        <DashedDivider />
 
         <About />
-        <CTA />
+        <DashedDivider />
 
-
-      </main>
-      <Footer />
-
+        <Footer />
+        <DashedDivider />
+        <DottedBackground />
     </div>
   );
 }

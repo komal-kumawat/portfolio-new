@@ -8,7 +8,7 @@ export default function Experience() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="experience" className="max-w-4xl mx-auto px-4 my-24">
+    <section id="experience" className="mx-auto px-10 my-24">
       {/* Heading */}
       <h2 className="text-4xl font-bold mb-4">Experience</h2>
       <p className="text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">

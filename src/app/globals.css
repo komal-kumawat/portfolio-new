@@ -200,3 +200,21 @@ html::view-transition-old(root) {
 html::view-transition-new(root) {
   z-index: 999;
 }
+
+/* globals.css */
+
+.bg-dot-grid {
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0.2) 1px,
+    transparent 1px
+  );
+  background-size: 16px 16px;
+}
+
+html.dark .bg-dot-grid {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.2) 1px,
+    transparent 1px
+  );
+}
+

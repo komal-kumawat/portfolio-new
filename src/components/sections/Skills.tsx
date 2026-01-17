@@ -6,12 +6,10 @@ import { TECH_STACK } from "../../data/tech.data";
 
 export default function Skills() {
   return (
-    <section id="skills" className="max-w-4xl mx-auto px-4 my-24">
+    <section id="skills" className="mmx-auto px-10 my-24">
       <h2 className="text-4xl font-bold mb-6">Skills</h2>
 
-      <p className="text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
-        Technologies I use to design, build, and ship reliable web applications.
-      </p>
+      
 
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
         {TECH_STACK.map((tech) => (
