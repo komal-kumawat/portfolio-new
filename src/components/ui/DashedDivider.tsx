@@ -11,7 +11,7 @@ export default function DashedDivider({ className = "" }: DashedDividerProps) {
         -ml-[50vw] -mr-[50vw]
         w-screen
         border-t-2 border-dashed
-        border-gray-300 dark:border-neutral-600
+        border-gray-200 dark:border-neutral-800
         my-2
         ${className}
       `}

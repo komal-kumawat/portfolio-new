@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { EXPERIENCES } from "../../data/experience.data";
+import DashedDivider from "../ui/DashedDivider";
 
 export default function Experience() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -19,10 +20,8 @@ export default function Experience() {
             <div
               key={index}
               className="
-                border border-gray-200 dark:border-gray-700 
                 rounded-lg 
                 transition-all duration-200
-                hover:border-gray-400 dark:hover:border-gray-500
               "
             >
               {/* Header */}
@@ -54,7 +53,7 @@ export default function Experience() {
               {/* Content */}
               {isOpen && (
                 <div className="px-5 pb-5">
-                  <ul className="list-disc pl-5 space-y-3 text-sm">
+                  <ul className="list-disc space-y-3 text-sm">
                     {exp.details.map((point, i) => (
                       <li
                         key={i}
