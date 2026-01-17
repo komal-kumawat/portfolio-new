@@ -14,17 +14,18 @@ export default function Home() {
     <div className="max-w-[800px]  flex flex-col  items-center m-auto text-gray-300">
       <Navbar />
       <main className="m-8 mt-30 dark:text-gray-300 text-gray-800">
-        <Hero/>
-        <Projects/>
-        <Experience/>
-        <Education/>
-        <About/>
-        <Skills/>
-        <CTA/>
-        
+        <Hero />
+        <Projects />
+        <Experience />
+        <Education />
+        <Skills />
+
+        <About />
+        <CTA />
+
 
       </main>
-      <Footer/>
+      <Footer />
 
     </div>
   );
