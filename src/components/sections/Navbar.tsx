@@ -31,7 +31,7 @@ const Navbar = () => {
         <nav
             className="
         fixed top-0 left-1/2 -translate-x-1/2
-        w-full max-w-[700px]
+        w-full max-w-[800px]
         z-50
         backdrop-blur-sm
         px-4 py-3
