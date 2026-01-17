@@ -2,13 +2,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Button from "../ui/Button";
-import { FileText, Github, Linkedin, Mail, X} from "lucide-react";
+import { FileText, Github, Linkedin, Mail, X } from "lucide-react";
 import IconComp from "../ui/IconComp";
 import { Twitter } from "lucide-react";
 import { AnimatedThemeToggler } from "../ui/themeToggle";
-import Link from "next/link";
-import DashedDivider from "../ui/DashedDivider"
 import {FaXTwitter} from "react-icons/fa6";
+import { SiLeetcode } from "react-icons/si"; 
 const Hero = () => {
 
     return (
@@ -54,7 +53,6 @@ const Hero = () => {
                     <span className="text-sm dark:text-gray-400 text-gray-600">Resume</span>
                 </a>
 
-                {/* GitHub Button */}
                 <a
                     href="mailto:kumawatkomal17122004@gmail.com"
                     className="
@@ -79,14 +77,16 @@ const Hero = () => {
                 </a>
             </div>
 
-            <div className="flex mx-2 gap-2 items-center">
-                <IconComp name="Github" url="https://github.com/komal-kumawat" icon={<Github size={19} className="dark:text-gray-400 text-gray-700" />
+            <div className="flex m-2 gap-2 items-center">
+                <Button name="Github" url="https://github.com/komal-kumawat" icon={<Github size={18} className="dark:text-gray-400 text-gray-700" />
                 } />
-                <IconComp name="LinkedIn" url="https://www.linkedin.com/in/komal-kumawat-7032662a0/" icon={<Linkedin size={18} className="dark:text-gray-400 text-gray-700" />
+                <Button name="LinkedIn" url="https://www.linkedin.com/in/komal-kumawat-7032662a0/" icon={<Linkedin size={18} className="dark:text-gray-400 text-gray-700" />
                 } />
-                <IconComp name="Twitter" url="https://x.com/KomalKumawat112" icon={<FaXTwitter size={18} className="dark:text-gray-400 text-gray-700" />
+                <Button name="Twitter" url="https://x.com/KomalKumawat112" icon={<FaXTwitter size={18} className="dark:text-gray-400 text-gray-700" />
                 } />
-                <IconComp name="Mail" url="mailto:kumawatkomal17122004@gmail.com" icon={<Mail size={18} className="dark:text-gray-400 text-gray-700" />
+                <Button name="Mail" url="mailto:kumawatkomal17122004@gmail.com" icon={<Mail size={18} className="dark:text-gray-400 text-gray-700" />
+                } />
+                <Button name="Leetcode" url="https://leetcode.com/u/komal_kumawat" icon={<SiLeetcode size={18} className="dark:text-gray-400 text-gray-700" />
                 } />
 
 

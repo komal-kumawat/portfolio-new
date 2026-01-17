@@ -1,12 +1,13 @@
 import Image from "next/image";
+import { ReactNode } from "react";
 
 interface ButtonProps {
-  iconPath: string;
+  icon: ReactNode;
   name: string;
   url:string
 }
 
-const Button = ({ iconPath, name , url }: ButtonProps) => {
+const Button = ({ icon, name , url }: ButtonProps) => {
     const handleClick = () => {
     window.open(url, "_blank"); // opens in new tab
   };
@@ -14,7 +15,7 @@ const Button = ({ iconPath, name , url }: ButtonProps) => {
     <div className="inline-flex items-center gap-1 align-middle border border-dotted rounded-md px-2 py-[2px] hover:border-gray-400 cursor-pointer"
     onClick={handleClick}
     >
-      <Image src={iconPath} width={16} height={16} alt={name} />
+        {icon}
       <span className="text-[0.9em] hover:text-gray-400">{name}</span>
     </div>
   );
