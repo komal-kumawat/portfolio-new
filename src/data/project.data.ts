@@ -1,73 +1,66 @@
 export const PROJECTS = [
   {
     title: "MeshSpire",
-    description: "A peer to peer learning app for students",
+    description: "A peer-to-peer learning app for students",
     image: "/projects/meshspire.png",
     live: "https://dev.dg4uqajhampr9.amplifyapp.com/",
     github: "https://github.com/komal-kumawat/MESHSPIRE",
-    figma:
-      "https://www.figma.com/design/fkprR8ZCbDezgeWweqLc6X/MS-landing?node-id=0-1&t=gscDeXAEkqGmTJlM-1",
+    technologies: ["React", "Node.js", "MongoDB", "Express", "NextJS" , "WebRTC" , "WebSocket" , "Redis"],
   },
-
-  
   {
     title: "Komal",
-    description: "A portfolio application in nextjs ",
+    description: "A portfolio application in Next.js",
     image: "/projects/komal.png",
     live: "https://komal-rho.vercel.app/",
     github: "https://github.com/komal-kumawat/Komal.git",
-    figma:
-      "https://www.figma.com/design/vX7gVhAgVACysF1aFNcCtj/Portfolio?node-id=36-541&t=zlVUk0IN29zpPcVg-1",
+    technologies: ["Next.js", "React", "TailwindCSS"],
   },
-    {
+  {
     title: "ElevateUI",
     description: "A modern UI component library with reusable components and live previews",
     image: "/projects/elevateui.png",
     live: "https://component-library-two-eta.vercel.app/",
     github: "https://github.com/komal-kumawat/ElevateUI.git",
-    figma: "https://figma.com/file/your-figma-link",
-},
-{
+    technologies: ["React", "Next.js", "TailwindCSS", "TypeScript"],
+  },
+  {
     title: "Readstack",
-    description: "A simple platform for powerful stories.",
+    description: "A simple platform for powerful stories",
     image: "/projects/readstack.png",
     live: "https://read-stack-teal.vercel.app/",
     github: "https://github.com/komal-kumawat/ReadStack.git",
-    figma: "https://figma.com/file/your-figma-link",
-},
-  
+    technologies: ["Next.js", "MongoDB", "TailwindCSS", "Node.js"],
+  },
   {
     title: "Investra",
-    description: "Low Latency real time trading and investment application",
-    image: "/projects/prominent.png", //
-    live: "https://investra-ilep.vercel.app/", // -> landing page
+    description: "Low-latency real-time trading and investment application",
+    image: "/projects/prominent.png",
+    live: "https://investra-ilep.vercel.app/",
     github: "https://github.com/komal-kumawat/Investra.git",
-    figma:
-      "https://www.figma.com/design/UhdHOIha7xWSdqZwHjCc7M/Prominent?node-id=1-2&t=37UrjNWrYqGqM5ym-1", //
+    technologies: ["React", "Node.js", "Socket.IO", "Express", "PostgreSQL"],
   },
   {
     title: "RiffinityAI",
     description: "An AI companion application with multiple models",
     image: "/projects/riffinity.png",
-    live: "https://riffinity-l18s.vercel.app/", // backend
+    live: "https://riffinity-l18s.vercel.app/",
     github: "https://github.com/komal-kumawat/RiffinityAI.git",
-    figma: "https://figma.com/file/your-figma-link", //
+    technologies: ["Next.js", "OpenAI API", "TailwindCSS", "React"],
   },
   {
     title: "QuickPay",
-    description: "An end to end payment gateway application",
-    image: "/projects/bridgepay.png", //
-    live: "https://quickpay-landing-page-xi.vercel.app/", // backend deploy
+    description: "An end-to-end payment gateway application",
+    image: "/projects/bridgepay.png",
+    live: "https://quickpay-landing-page-xi.vercel.app/",
     github: "https://github.com/komal-kumawat/QuickPay.git",
-    figma: "https://figma.com/file/your-figma-link", //
+    technologies: ["Next.js", "Stripe API", "React", "TailwindCSS"],
   },
   {
     title: "ConnectLive",
-    description: "A low latency video confrencing platforms",
+    description: "A low-latency video conferencing platform",
     image: "/projects/connectright.png",
-    live: "https://connect-live-theta.vercel.app/", // ->chang the landing page
-    github: "https://github.com/StealthSilver/ConnectRight", // change the souce code
-    figma: "https://figma.com/file/your-figma-link", //
+    live: "https://connect-live-theta.vercel.app/",
+    github: "https://github.com/StealthSilver/ConnectRight",
+    technologies: ["React", "WebRTC", "Node.js", "Socket.IO", "TailwindCSS"],
   },
-  
 ];

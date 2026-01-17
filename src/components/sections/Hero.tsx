@@ -40,7 +40,7 @@ const Hero = () => {
                 <h1 className="text-4xl font-bold  ">
                     Hi, I'm Komal —  <span className="text-gray-500">A Full Stack web developer.</span>
                 </h1>
-                <span className="text-gray-500 flex flex-wrap items-center gap-2" style={{ wordSpacing: '0.5rem' }}>I build interactive web apps using
+                <span className="dark:text-gray-400 text-gray-600  flex flex-wrap items-center gap-2 font-medium" style={{ wordSpacing: '0.5rem' }}>I build interactive web apps using
                     <Button name="Typescript" iconPath="/icons/typescript.svg" url="https://www.typescriptlang.org/">
                     </Button>
                     ,
@@ -67,7 +67,7 @@ const Hero = () => {
       rounded-xl
       border border-neutral-300 dark:border-neutral-700
       bg-white dark:bg-neutral-900
-      text-neutral-900 dark:text-neutral-200
+      text-neutral-700 dark:text-neutral-200
       shadow-sm
       hover:shadow-md
       hover:-translate-y-[1px]
@@ -77,9 +77,9 @@ const Hero = () => {
                 >
                     <FileText
                         size={18}
-                        className="transition-transform duration-300 group-hover:scale-110 text-gray-400"
+                        className="transition-transform duration-300 group-hover:scale-110 dark:text-gray-400 text-gray-600"
                     />
-                    <span className="font-medium text-gray-400">Resume</span>
+                    <span className="font-medium dark:text-gray-400 text-gray-600">Resume</span>
                 </a>
 
                 {/* GitHub Button */}
@@ -101,9 +101,9 @@ const Hero = () => {
                 >
                     <Send
                         size={18}
-                        className="transition-transform duration-300 group-hover:scale-110 text-gray-400"
+                        className="transition-transform duration-300 group-hover:scale-110 dark:text-gray-400 text-gray-600"
                     />
-                    <span className="font-medium text-gray-400">Connect Now</span>
+                    <span className="font-medium dark:text-gray-400 text-gray-600">Connect Now</span>
                 </a>
             </div>
 

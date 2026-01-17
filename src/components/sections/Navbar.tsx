@@ -20,10 +20,11 @@ const Navbar = () => {
     const toggleMenu = () => setIsOpen((v) => !v);
 
     const navItems = [
-        { name: "About", href: "#about" },
-        { name: "Experience", href: "#experience" },
-        { name: "Education", href: "#education" },
         { name: "Projects", href: "#projects" },
+        { name: "Experience", href: "#experience" },
+
+        { name: "About", href: "#about" },
+        { name: "Education", href: "#education" },
 
     ];
 
