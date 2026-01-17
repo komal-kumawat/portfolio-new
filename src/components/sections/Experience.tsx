@@ -8,13 +8,12 @@ export default function Experience() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="experience" className="max-w-4xl mx-auto px-4 mt-24 min-h-[100vh]">
-      <h2 className="text-4xl font-bold mb-10">Experience</h2>
-      <p>
-        <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-            Hands-on experience building real-world applications,
-            collaborating in teams, and shipping production-ready features.
-          </p>
+    <section id="experience" className="max-w-4xl mx-auto px-4 my-24">
+      {/* Heading */}
+      <h2 className="text-4xl font-bold mb-4">Experience</h2>
+      <p className="text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
+        Hands-on experience building real-world applications, collaborating in
+        teams, and shipping production-ready features.
       </p>
 
       <div className="space-y-6">
@@ -24,7 +23,12 @@ export default function Experience() {
           return (
             <div
               key={index}
-              className="border border-gray-200 dark:border-gray-700 rounded-lg"
+              className="
+                border border-gray-200 dark:border-gray-700 
+                rounded-lg 
+                transition-all duration-200
+                hover:border-gray-400 dark:hover:border-gray-500
+              "
             >
               {/* Header */}
               <button
@@ -32,25 +36,38 @@ export default function Experience() {
                 className="
                   w-full text-left
                   flex justify-between items-center
-                  p-4
+                  p-5
+                  focus:outline-none
                 "
               >
                 <div>
-                  <p className="font-medium text-lg">{exp.position}</p>
+                  <p className="font-semibold text-lg">
+                    {exp.position}
+                  </p>
                   <p className="text-sm text-gray-500">
                     {exp.company} · {exp.duration}
                   </p>
                 </div>
 
-                {isOpen ? <ChevronUp /> : <ChevronDown />}
+                {isOpen ? (
+                  <ChevronUp className="text-gray-600" />
+                ) : (
+                  <ChevronDown className="text-gray-600" />
+                )}
               </button>
 
               {/* Content */}
               {isOpen && (
-                <div className="px-4 pb-4">
-                  <ul className="list-disc pl-5 text-sm text-gray-600 dark:text-gray-300 space-y-2">
+                <div className="px-5 pb-5">
+                  <ul className="list-disc pl-5 space-y-3 text-sm">
                     {exp.details.map((point, i) => (
-                      <li key={i} className="dark:text-gray-400 text-gray-600  flex flex-wrap items-center gap-2 font-medium" style={{ wordSpacing: '0.5rem' }}>{point}</li>
+                      <li
+                        key={i}
+                        className="text-gray-600 dark:text-gray-400 font-medium leading-relaxed"
+                        style={{ wordSpacing: "0.4rem" }}
+                      >
+                        {point}
+                      </li>
                     ))}
                   </ul>
                 </div>
