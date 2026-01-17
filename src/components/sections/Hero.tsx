@@ -2,13 +2,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Button from "../ui/Button";
-import { FileText, Github, Linkedin, Mail, Send } from "lucide-react";
+import { FileText, Github, Linkedin, Mail, X} from "lucide-react";
 import IconComp from "../ui/IconComp";
 import { Twitter } from "lucide-react";
 import { AnimatedThemeToggler } from "../ui/themeToggle";
 import Link from "next/link";
-import DashedDivider from "../ui/DashedDivider";
-
+import DashedDivider from "../ui/DashedDivider"
+import {FaXTwitter} from "react-icons/fa6";
 const Hero = () => {
 
     return (
@@ -21,7 +21,7 @@ const Hero = () => {
                     Hey, I'm Komal Kumawat, a full stack developer who loves building clean, modern websites and apps where design, functionality, and even the smallest details matter, with a focus on making products that are both practical and visually satisfying.
 
                 </span>
-                                <span className="dark:text-gray-400 text-gray-600  flex flex-wrap items-center  text-sm" style={{ wordSpacing: '0.5rem' }}>
+                <span className="dark:text-gray-400 text-gray-600  flex flex-wrap items-center  text-sm" style={{ wordSpacing: '0.5rem' }}>
 
                     Tech stack isn't my concern, I'm flexible with whatever the project needs, though I prefer modern frameworks and tools. I'm always open for new opportunities to learn and grow.
 
@@ -80,20 +80,19 @@ const Hero = () => {
             </div>
 
             <div className="flex mx-2 gap-2 items-center">
-                <IconComp name="Github" url="https://github.com/komal-kumawat" icon={<Github size={22} className="text-gray-400" />
+                <IconComp name="Github" url="https://github.com/komal-kumawat" icon={<Github size={19} className="dark:text-gray-400 text-gray-700" />
                 } />
-                <IconComp name="LinkedIn" url="https://www.linkedin.com/in/komal-kumawat-7032662a0/" icon={<Linkedin size={22} className="text-gray-400" />
+                <IconComp name="LinkedIn" url="https://www.linkedin.com/in/komal-kumawat-7032662a0/" icon={<Linkedin size={18} className="dark:text-gray-400 text-gray-700" />
                 } />
-                <IconComp name="Twitter" url="https://x.com/KomalKumawat112" icon={<Twitter size={22} className="text-gray-400" />
+                <IconComp name="Twitter" url="https://x.com/KomalKumawat112" icon={<FaXTwitter size={18} className="dark:text-gray-400 text-gray-700" />
                 } />
-                <IconComp name="Mail" url="mailto:kumawatkomal17122004@gmail.com" icon={<Mail size={22} className="text-gray-400" />
+                <IconComp name="Mail" url="mailto:kumawatkomal17122004@gmail.com" icon={<Mail size={18} className="dark:text-gray-400 text-gray-700" />
                 } />
 
 
             </div>
 
-
-
+            
 
         </div>
     );
