@@ -34,7 +34,7 @@ const Navbar = () => {
         w-full max-w-[800px]
         z-50
         backdrop-blur-sm
-        px-4 py-3
+        px-6 py-3
       "
         >
             <div className="flex justify-between items-center">
