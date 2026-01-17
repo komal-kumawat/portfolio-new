@@ -10,7 +10,7 @@ const Hero = () => {
     const [displayProfile, setDisplayProfile] = useState(false);
 
     return (
-        <div className="flex flex-col gap-10 m-3 h-[100vh]">
+        <div className="flex flex-col gap-10  h-[100vh]">
 
             <div className="flex items-center gap-3">
                 <Image
