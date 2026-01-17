@@ -109,13 +109,13 @@ const Navbar = () => {
                             </Link>
                         )
                         }
-                        <a
+                        <Link
                             href="#footer"
                             className="rounded-full border px-6 py-1.5 transition-colors bg-gray-900 text-white border-gray-900 hover:bg-white hover:text-black dark:bg-gray-100 dark:text-black dark:border-gray-100 dark:hover:bg-black dark:hover:text-white"
                             onClick={() => setIsOpen(false)}
                         >
                             Connect
-                        </a>
+                        </Link>
                     </div>
                 </div>
             )}
