@@ -6,8 +6,7 @@ import { TECH_STACK } from "../../data/tech.data";
 
 export default function Skills() {
   return (
-    <section id="skills" className="mmx-auto p-5">
-
+    <section id="skills" className="mx-auto p-5">
       <div className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-7 gap-6">
         {TECH_STACK.map((tech) => (
           <TechItem key={tech.key} tech={tech} />
@@ -76,9 +75,9 @@ function TechItem({ tech }: { tech: any }) {
         className="
           flex items-center justify-center
           w-12 h-12
-          border border-gray-200 dark:border-gray-700
+          border border-gray-200 dark:border-neutral-800
           rounded-lg
-          hover:bg-gray-100 dark:hover:bg-gray-800
+          hover:bg-gray-100 dark:hover:bg-neutral-800
           transition-colors
         "
       >

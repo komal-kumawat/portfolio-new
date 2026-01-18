@@ -33,7 +33,7 @@
   --color-selection: var(--selection);
   --color-selection-foreground: var(--selection-foreground);
 
-  --font-sans: var(--font-plex-sans);
+  --font-sans: var(--font-hanken-grotesk);
   --font-mono: var(--font-plex-mono);
 
   --shadow-popover: var(--shadow-popover);
@@ -70,13 +70,13 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
+  --background: #f9fafb;
 
   --foreground: oklch(0.141 0.005 285.823);
 }
 
 .dark {
-  --background: #000000;
+  --background: #0a0a0a;
   --foreground: #ffffff;
 }
 
@@ -204,10 +204,7 @@ html::view-transition-new(root) {
 /* globals.css */
 
 .bg-dot-grid {
-  background-image: radial-gradient(
-    rgba(0, 0, 0, 0.2) 1px,
-    transparent 1px
-  );
+  background-image: radial-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 1px);
   background-size: 16px 16px;
 }
 
@@ -217,4 +214,3 @@ html.dark .bg-dot-grid {
     transparent 1px
   );
 }
-

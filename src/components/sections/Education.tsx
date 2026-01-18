@@ -1,65 +1,82 @@
 "use client";
 
-import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
 import { EDUCATION } from "../../data/education.data";
+import Image from "next/image";
 
 export default function Education() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
-    <section id="education" className="mx-auto px-10 my-24">
-      {/* Heading */}
-      <h2 className="text-4xl font-bold mb-6">Education</h2>
-
-      
-      {/* Cards */}
-      <div className="space-y-6">
+    <section id="education" className=" px-2 my-6">
+      <div className="space-y-0">
         {EDUCATION.map((edu, index) => {
-          const isOpen = openIndex === index;
-
           return (
-            <div
-              key={index}
-              className="border border-gray-200 dark:border-gray-700 rounded-lg"
-            >
-              {/* Header */}
-              <button
-                onClick={() => setOpenIndex(isOpen ? null : index)}
+            <div key={index}>
+              <div
                 className="
-                  w-full text-left
-                  flex justify-between items-center
-                  p-4
-                "
+                transition-all duration-200 py-4
+              "
               >
-                <div>
-                  <p className="font-medium text-lg">
-                    {edu.position}
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    {edu.company} · {edu.duration}
-                  </p>
+                {/* Header */}
+                <div className="w-full text-left flex justify-between items-center">
+                  <div className="flex gap-3 items-center">
+                    {/* Logo */}
+                    <div className="border border-gray-300 dark:border-neutral-800 rounded-lg p-3 flex-shrink-0 w-16 h-16 flex items-center justify-center">
+                      <Image
+                        src={edu.logo}
+                        alt={edu.company}
+                        width={40}
+                        height={40}
+                        className="object-contain"
+                      />
+                    </div>
+
+                    {/* Company & Position */}
+                    <div>
+                      <h3 className="text-xl font-semibold">{edu.company}</h3>
+                      <p className="text-base text-gray-600 dark:text-gray-400">
+                        {edu.position}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Date, Location */}
+                  <div className="text-right">
+                    <p className="text-base font-medium">{edu.duration}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {edu.location}
+                    </p>
+                  </div>
                 </div>
 
-                {isOpen ? <ChevronUp /> : <ChevronDown />}
-              </button>
-
-              {/* Content */}
-              {isOpen && (
-                <div className="px-4 pb-4">
-                  <ul className="list-disc pl-5 space-y-2 text-sm">
+                {/* Content */}
+                <div className="mt-3 space-y-3">
+                  {/* Details */}
+                  <ul className="space-y-2">
                     {edu.details?.map((point, i) => (
                       <li
                         key={i}
-                        className="text-gray-600 dark:text-gray-400 font-medium"
-                        style={{ wordSpacing: "0.5rem" }}
+                        className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed flex"
                       >
-                        {point}
+                        <span className="mr-3 flex-shrink-0">•</span>
+                        <span>{point}</span>
                       </li>
                     ))}
                   </ul>
+
+                  {/* Tech Stack */}
+                  {edu.techStack && (
+                    <div className="flex flex-wrap gap-2 pl-[16px]">
+                      {edu.techStack.map((tech, i) => (
+                        <span
+                          key={i}
+                          className="px-2.5 py-1 rounded-md bg-white dark:bg-neutral-950 text-gray-600 dark:text-gray-300 text-xs font-medium border border-gray-200 dark:border-neutral-800"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              )}
+              </div>
             </div>
           );
         })}
