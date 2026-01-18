@@ -31,7 +31,7 @@ export default function VerticalContainerBorders({
           h-full
           border-r-2
           border-dashed
-          border-gray-300 dark:border-neutral-600
+          border-gray-200 dark:border-neutral-800
           pointer-events-none
           ${className}
         `}
